@@ -4,10 +4,10 @@ import run from '@rollup/plugin-run';
 const isDev = process.env.ROLLDOWN_WATCH === 'true';
 
 export default defineConfig({
-    input: 'src/index.ts',
+    input: 'src/tp.ts',
     platform: 'node',
     output: {
-        file: 'dist/index.js',
+        file: 'dist/server.js',
         format: 'esm',
         sourcemap: true,
     },

@@ -1,0 +1,17 @@
+name: tp-nodejs-production
+
+services:
+  app:
+    build:
+      context: .
+      target: production
+    init: true
+    restart: unless-stopped
+    env_file: .env.production
+    ports:
+      - "8000:8000"
+    volumes:
+      - notes-data:/home/node/data
+
+volumes:
+  notes-data:
